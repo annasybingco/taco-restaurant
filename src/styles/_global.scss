@@ -1,21 +1,23 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "typography" as *;
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  // background-color: $bg-beige;
 }
 //light mode
 :root {
   --bg-color: #{$light-primary-background};
+  --bg-color-secondary: #{$light-secondary-background};
   --text-color: #{$light-primary-text};
 }
 
 //dark mode
 [data-theme="dark"] {
   --bg-color: #{$dark-primary-background};
+  --bg-color-secondary: #{$dark-secondary-background};
   --text-color: #{$dark-primary-text};
 }
 
@@ -37,4 +39,60 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-family: "Cocogoose";
+  font-size: 20px;
+  color: var(--text-color);
+}
+h2 {
+  font-family: "Cocogoose";
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Cocogoose";
+  font-size: 16px;
+}
+h4 {
+  font-family: "Cocogoose";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body {
+  font-family: "Made Mirage";
+  font-size: 14px;
+}
+
+body-small {
+  font-family: "Made Mirage";
+  font-size: 10px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-family: "Cocogoose";
+    font-size: 24px;
+  }
+
+  h2 {
+    font-family: "Cocogoose";
+    font-size: 22px;
+  }
+
+  h3 {
+    font-family: "Cocogoose";
+    font-size: 20px;
+  }
+
+  body {
+    font-family: "Made Mirage";
+    font-size: 16px;
+  }
+
+  body-small {
+    font-family: "Made Mirage";
+    font-size: 14px;
+  }
 }
