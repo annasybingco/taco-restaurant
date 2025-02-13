@@ -12,6 +12,7 @@
   --bg-color: #{$light-primary-background};
   --bg-color-secondary: #{$light-secondary-background};
   --text-color: #{$light-primary-text};
+  --icon-color: #{$light-icon};
 }
 
 //dark mode
@@ -19,6 +20,7 @@
   --bg-color: #{$dark-primary-background};
   --bg-color-secondary: #{$dark-secondary-background};
   --text-color: #{$dark-primary-text};
+  --icon-color: #{$dark-icon};
 }
 
 #root {
