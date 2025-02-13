@@ -2,24 +2,39 @@
 @use "./mixins" as *;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: $bg-beige;
-  }
-  
-  #root {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-  
-    @include tablet {
-      padding: 2em;
-    }
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  // background-color: $bg-beige;
+}
+//light mode
+:root {
+  --bg-color: #{$light-primary-background};
+  --text-color: #{$light-primary-text};
+}
 
-  ul{
-    list-style-type: none;
-  }
+//dark mode
+[data-theme="dark"] {
+  --bg-color: #{$dark-primary-background};
+  --text-color: #{$dark-primary-text};
+}
 
- 
+#root {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  @include tablet {
+    padding: 2em;
+  }
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
