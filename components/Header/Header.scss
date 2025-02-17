@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  fill: var(--logo-color);
+}
+
+.cart {
+  position: relative;
+}
+
+.cart__value {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: var(--badge-color);
+  color: var(--text-color-tertiary);
+  border-radius: 100%;
+  padding: 0.75em;
+  left: 5%;
+  bottom: 20%;
+}

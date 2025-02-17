@@ -12,7 +12,10 @@
   --bg-color: #{$light-primary-background};
   --bg-color-secondary: #{$light-secondary-background};
   --text-color: #{$light-primary-text};
+  --text-color-tertiary: #{$light-tertiary-text};
   --icon-color: #{$light-icon};
+  --logo-color: #{$light-logo};
+  --badge-color: #{$light-badge-color};
 }
 
 //dark mode
@@ -20,7 +23,10 @@
   --bg-color: #{$dark-primary-background};
   --bg-color-secondary: #{$dark-secondary-background};
   --text-color: #{$dark-primary-text};
+  --text-color-tertiary: #{$dark-tertiary-text};
   --icon-color: #{$dark-icon};
+  --logo-color: #{dark-logo};
+  --badge-color: #{$dark-badge-color};
 }
 
 #root {

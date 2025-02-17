@@ -1,7 +1,8 @@
 import "../../styles/_typography.scss";
-import "../Homepage/Homepage.scss";
+import "./Homepage.scss";
 import useTheme from "../../../components/Theme/theme.jsx";
 import "../../styles/_variables.scss";
+import Header from "../../../components/Header/Header.jsx";
 
 import React from "react";
 import MenuItems from "../../../components/MenuItems/MenuItems.jsx";
@@ -13,7 +14,7 @@ export function ThemeToggle() {
 
   return (
     <button onClick={toggleTheme}>
-      {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
+      {theme === "light" ? "Dark Mode" : "Light Mode"}
     </button>
   );
 }
@@ -21,8 +22,7 @@ export function ThemeToggle() {
 function Homepage() {
   return (
     <div className="page">
-      <h1>Burger Drops</h1>
-
+      <Header />
       <Navigation />
       <ThemeToggle />
       <MenuItems />
