@@ -1,7 +1,7 @@
-import homeIcon from "../../src/assets/icons/home.svg";
-import rewardsIcon from "../../src/assets/icons/rewards.svg";
-import profileIcon from "../../src/assets/icons/profile.svg";
-import faqIcon from "../../src/assets/icons/faq.svg";
+import homeIcon from "../../assets/icons/home.svg";
+import rewardsIcon from "../../assets/icons/rewards.svg";
+import profileIcon from "../../assets/icons/profile.svg";
+import faqIcon from "../../assets/icons/faq.svg";
 import "../Navigation/Navigation.scss";
 
 function Navigation() {

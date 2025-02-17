@@ -1,5 +1,5 @@
-import logo from "../../src/assets/icons/burger-drop-logo.svg";
-import cart from "../../src/assets/icons/cart.svg";
+import logo from "../../assets/icons/burger-drop-logo.svg";
+import cart from "../../assets/icons/cart.svg";
 import "./Header.scss";
 
 function Header() {
