@@ -1,6 +1,6 @@
 import "../../styles/_typography.scss";
 import "./Homepage.scss";
-import useTheme from "../../components/Theme/theme.js";
+import useTheme from "../../components/Theme/theme.jsx";
 import "../../styles/_variables.scss";
 import Header from "../../components/Header/Header.jsx";
 
@@ -14,7 +14,7 @@ export function ThemeToggle() {
 
   return (
     <button onClick={toggleTheme}>
-      {theme === "light" ? "Dark Mode" : "Light Mode"}
+      {theme === "light" ? "🌙 Dark Mode" : "☀️ Light Mode"}
     </button>
   );
 }
