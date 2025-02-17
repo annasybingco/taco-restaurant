@@ -1,0 +1,56 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.details__photo {
+  width: 50%;
+  overflow: hidden;
+}
+
+.details__info {
+  @include background-style;
+}
+
+.details__item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.details__checkbox {
+  @include checkbox;
+}
+
+.details__ingredients {
+  @include background-style;
+}
+
+.details__remove {
+  @include background-style;
+}
+
+.details__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.details__list-item {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 1em;
+}
+
+.details__textarea {
+  display: flex;
+  flex-direction: column;
+}
+
+.details__textbox {
+  border: none;
+  resize: none;
+  border-radius: 8px;
+}

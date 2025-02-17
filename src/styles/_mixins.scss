@@ -11,3 +11,13 @@
     @content;
   }
 }
+
+@mixin background-style {
+  padding: 20px;
+  background-color: var(--bg-color-secondary);
+  border-radius: 8px;
+}
+
+@mixin checkbox {
+  width: 20px;
+}
