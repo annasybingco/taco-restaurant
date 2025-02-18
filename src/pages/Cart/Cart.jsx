@@ -4,6 +4,7 @@ import cart from "../../assets/icons/cart.svg";
 import logo from "../../assets/icons/burger-drop-logo.svg";
 import back from "../../assets/icons/back.svg";
 import "./Cart.scss";
+import Order from "../../components/Order/Order";
 
 const CartPage = () => {
   const [cartQuantity, setCartQuantity] = useState(1); // Initial quantity
@@ -24,6 +25,7 @@ const CartPage = () => {
         minValue={1}
         maxValue={100}
       />
+      <Order />
     </div>
   );
 };

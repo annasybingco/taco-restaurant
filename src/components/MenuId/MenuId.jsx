@@ -3,11 +3,16 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../MenuId/MenuId.scss";
 import close from "../../assets/icons/close.svg";
+import { useNavigate } from "react-router-dom";
 
 function MenuId() {
   const [item, setItem] = useState({});
   const [ingredient, setIngredient] = useState([]);
   const { id } = useParams();
+  const navigate = useNavigate();
+  const handleOrderClick = () => {
+    navigate("/order", { state: { photo: item.photo } });
+  };
 
   const getItem = async (id) => {
     try {
@@ -90,6 +95,7 @@ function MenuId() {
             placeholder="Add a note (Extra drop sauce, no onions, etc)"
           ></textarea>
         </div>
+        <button onClick={handleOrderClick}>Order Now</button>
       </section>
     </>
   );
