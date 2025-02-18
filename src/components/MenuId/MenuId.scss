@@ -6,9 +6,18 @@
   flex-direction: column;
   gap: 2em;
 }
+
+.details__img {
+  display: flex;
+  justify-content: space-between;
+}
 .details__photo {
   width: 50%;
   overflow: hidden;
+}
+
+.details__close {
+  height: 1em;
 }
 
 .details__info {

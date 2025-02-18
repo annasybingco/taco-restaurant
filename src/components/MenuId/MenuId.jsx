@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import "../MenuId/MenuId.scss";
+import close from "../../assets/icons/close.svg";
 
 function MenuId() {
   const [item, setItem] = useState({});
@@ -37,7 +38,11 @@ function MenuId() {
     <>
       <section className="details">
         {/* -----------------------image---------------------- */}
-        <img src={item.photo} alt={item.title} className="details__photo" />
+        <div className="details__img">
+          <img src={item.photo} alt={item.title} className="details__photo" />
+          <img src={close} alt="close-icon" className="details__close" />
+        </div>
+        {/* -----------------------description---------------------- */}
         <section className="details__info">
           <h2>{item.title}</h2>
           <p>{item.description}</p>
