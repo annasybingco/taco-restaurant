@@ -3,24 +3,21 @@ import "./QuantitySelector.scss";
 import add from "../../assets/icons/add.svg";
 import subtract from "../../assets/icons/subtract.svg";
 
-function QuantitySelector({ minValue = 0, maxValue = 100 }) {
-  const [count, setCount] = useState(minValue);
-
-  //function to handle incrementing the counter
-
+function QuantitySelector({ count, setCount, minValue = 1, maxValue = 100 }) {
+  // Increment function
   const handleIncrementCounter = () => {
     if (count < maxValue) {
-      setCount((prevState) => prevState + 1);
+      setCount(count + 1);
     }
   };
 
-  //function to handle decrement
-
+  // Decrement function
   const handleDecrementCounter = () => {
     if (count > minValue) {
-      setCount((prevState) => prevState - 1);
+      setCount(count - 1);
     }
   };
+
   return (
     <div className="btn-group">
       <button className="btn" onClick={handleDecrementCounter}>
