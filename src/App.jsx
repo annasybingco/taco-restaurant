@@ -3,20 +3,25 @@ import React from "react";
 import FunctionContextComponent from "./Functions/FunctionContextComponent.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import Details from "./pages/Details/Details";
-import Cart from "./pages/Cart/Cart";
+import Cart1 from "./pages/Cart/Cart1";
 import { ThemeProvider } from "./Context/ThemeContext.jsx";
+import Header from "./components/Header/Header.jsx";
+import { CartProvider } from "./Context/CartContext.jsx";
 
 function App() {
   return (
     <ThemeProvider>
-      <FunctionContextComponent />
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/:id" element={<Details />} />
-          <Route path="/cart" element={<Cart />} />
-        </Routes>
-      </BrowserRouter>
+      <CartProvider>
+        <FunctionContextComponent />
+        <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Homepage />} />
+            <Route path="/:id" element={<Details />} />
+            <Route path="/cart" element={<Cart1 />} />
+          </Routes>
+        </BrowserRouter>
+      </CartProvider>
     </ThemeProvider>
   );
 }
