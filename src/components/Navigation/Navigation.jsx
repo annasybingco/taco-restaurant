@@ -1,34 +1,26 @@
-import homeIcon from "../../assets/icons/home.svg";
-import rewardsIcon from "../../assets/icons/rewards.svg";
-import profileIcon from "../../assets/icons/profile.svg";
-import faqIcon from "../../assets/icons/faq.svg";
+import HomeLogo from "../SVG/HomeLogo";
+import RewardsLogo from "../SVG/RewardsLogo";
+import ProfileLogo from "../SVG/ProfileLogo";
+import FaqLogo from "../SVG/FaqLogo";
 import "../Navigation/Navigation.scss";
 
 function Navigation() {
   return (
     <section className="navigation">
       <div className="navigation__item">
-        <img src={homeIcon} alt="home-icon" className="navigation__icon" />
+        <HomeLogo />
         <p>Menu</p>
       </div>
       <div className="navigation__item">
-        <img
-          src={rewardsIcon}
-          alt="rewards-icon"
-          className="navigation__icon"
-        />
+        <RewardsLogo />
         <p>Rewards</p>
       </div>
       <div className="navigation__item">
-        <img
-          src={profileIcon}
-          alt="profile-icon"
-          className="navigation__icon"
-        />
+        <ProfileLogo />
         <p>Profile</p>
       </div>
       <div className="navigation__item">
-        <img src={faqIcon} alt="faq-icon" className="navigation__icon" />
+        <FaqLogo />
         <p>FAQ</p>
       </div>
     </section>

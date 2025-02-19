@@ -1,20 +1,43 @@
 import close from "../../assets/icons/close.svg";
 import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
+import { useState } from "react";
 
 const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
 
-  const addtoCart = (item) => {
-    console.log(item);
-    dispatch({ type: "ADD", item });
+  //create useState for addons + remove
+  const [selectedAddOns, setSelectedAddons] = useState([]);
+
+  //target what's been added
+  const handleAddOnChange = (selectedId) => {
+    setSelectedAddons((prev) => {
+      const isAlreadySelected = prev.some(
+        (ingredient) => ingredient.id === selectedId
+      );
+
+      const updatedAddOns = isAlreadySelected
+        ? prev.filter((ingredient) => ingredient.id !== selectedId) // Remove if exists
+        : [...prev, ingredient.find((i) => i.id === selectedId)]; // Add full object
+
+      console.log("Updated Add-Ons:", updatedAddOns); // ✅ Log after update
+      return updatedAddOns;
+    });
+  };
+
+  const addtoCart = () => {
+    const updatedItem = {
+      ...item,
+      selectedAddOns,
+    };
+
+    console.log("Selected Add-Ons before dispatch:", selectedAddOns);
+
+    dispatch({ type: "ADD", item: updatedItem });
   };
 
   return (
     <>
-      <div>
-        <h2>{item.title}</h2>
-      </div>
       {/* -----------------------image---------------------- */}
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
@@ -34,7 +57,12 @@ const MenuItemDetails = ({ item, ingredient }) => {
               <p className="body">{item.ingredient}</p>
               <p>{item.price}</p>
             </div>
-            <input type="checkbox" className="details__checkbox" />
+            <input
+              type="checkbox"
+              className="details__checkbox"
+              checked={selectedAddOns.some((addOn) => addOn.id === item.id)}
+              onChange={() => handleAddOnChange(item.id)}
+            />
           </li>
         ))}
       </ul>
