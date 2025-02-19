@@ -1,9 +1,17 @@
 import close from "../../assets/icons/close.svg";
 import "../MenuId/MenuId.scss";
+import { Link } from "react-router-dom";
 
 const MenuItemDetails = ({ item, ingredient }) => {
+  console.log(item);
   return (
     <>
+      <div>
+        <h2>{item.title}</h2>
+        <Link to={{ pathname: "/cart", state: { item, ingredient } }}>
+          Go to Cart
+        </Link>
+      </div>
       {/* -----------------------image---------------------- */}
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
@@ -57,6 +65,7 @@ const MenuItemDetails = ({ item, ingredient }) => {
           placeholder="Add a note (Extra drop sauce, no onions, etc)"
         ></textarea>
       </div>
+      <button>Add to Cart</button>
     </>
   );
 };
