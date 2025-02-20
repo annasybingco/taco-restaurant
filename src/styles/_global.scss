@@ -9,6 +9,15 @@
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
 //light mode
 :root {
   --bg-color: #{$light-primary-background};

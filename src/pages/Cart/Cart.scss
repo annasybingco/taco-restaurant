@@ -1,4 +1,5 @@
 @use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
 
 .cart {
   display: flex;
@@ -30,4 +31,15 @@
 .cart-icon {
   height: 40px;
   display: block;
+}
+.order {
+  @include background-style;
+}
+
+.order__image {
+  width: 60px;
+}
+
+.order__section {
+  display: flex;
 }

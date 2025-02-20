@@ -3,7 +3,7 @@ import React from "react";
 import FunctionContextComponent from "./Functions/FunctionContextComponent.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import Details from "./pages/Details/Details";
-import Cart1 from "./pages/Cart/Cart1";
+import Cart from "./pages/Cart/Cart";
 import Faq from "./pages/Faq/Faq.jsx";
 import { ThemeProvider } from "./Context/ThemeContext.jsx";
 import Header from "./components/Header/Header.jsx";
@@ -21,7 +21,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Homepage />} />
             <Route path="/menu/:id" element={<Details />} />
-            <Route path="/cart" element={<Cart1 />} />
+            <Route path="/cart" element={<Cart />} />
             <Route path="/faq" element={<Faq />} />
             <Route path="/rewards" element={<Rewards />} />
             <Route path="/profile" element={<Profile />} />

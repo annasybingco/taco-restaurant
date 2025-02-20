@@ -1,15 +1,19 @@
 import close from "../../assets/icons/close.svg";
 import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
-
-  //create useState for addons + remove
   const [selectedAddOns, setSelectedAddons] = useState([]);
+  const [cart, setCart] = useState([]);
 
-  //target what's been added
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(existingCart);
+  }, []);
+
   const handleAddOnChange = (selectedId) => {
     setSelectedAddons((prev) => {
       const isAlreadySelected = prev.some(
@@ -30,8 +34,12 @@ const MenuItemDetails = ({ item, ingredient }) => {
       selectedAddOns,
     };
 
-    console.log("Selected Add-Ons before dispatch:", selectedAddOns);
+    // Store in localStorage
+    const updatedCart = [...cart, updatedItem];
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
 
+    console.log("Selected Add-Ons before dispatch:", selectedAddOns);
     dispatch({ type: "ADD", item: updatedItem });
   };
 
