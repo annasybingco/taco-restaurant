@@ -21,3 +21,11 @@
 @mixin checkbox {
   width: 20px;
 }
+
+@mixin button {
+  background-color: var(--cta-color);
+  color: var(--cta-text-color);
+  border-radius: 8px;
+  padding: 8px 0;
+  width: 100%;
+}

@@ -3,6 +3,7 @@ import { useTheme } from "../../Context/ThemeContext";
 function HomeLogo() {
   const theme = useTheme();
   const logoColor = theme === "light" ? "#635443" : "#c2a788"; // if light then set other
+
   return (
     <svg
       width="26"
