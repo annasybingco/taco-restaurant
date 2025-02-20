@@ -1,21 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
-import FunctionContextComponent from "./Functions/FunctionContextComponent.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import Details from "./pages/Details/Details";
 import Cart from "./pages/Cart/Cart";
 import Faq from "./pages/Faq/Faq.jsx";
 import { ThemeProvider } from "./Context/ThemeContext.jsx";
-import Header from "./components/Header/Header.jsx";
 import { CartProvider } from "./Context/CartContext.jsx";
 import Rewards from "./pages/Rewards/Rewards.jsx";
 import Profile from "./pages/Profile/Profile.jsx";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
   return (
     <ThemeProvider>
       <CartProvider>
-        <FunctionContextComponent />
         <BrowserRouter>
           <Header />
           <Routes>

@@ -1,10 +1,11 @@
 import React from "react";
+import FunctionContextComponent from "../../Functions/FunctionContextComponent";
 import Navigation from "../../components/Navigation/Navigation";
 
 function Profile() {
   return (
     <div>
-      <h1>this is my profile page</h1>
+      <FunctionContextComponent />
       <Navigation />
     </div>
   );

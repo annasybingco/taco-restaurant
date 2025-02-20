@@ -2,6 +2,7 @@ import close from "../../assets/icons/close.svg";
 import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
@@ -48,7 +49,9 @@ const MenuItemDetails = ({ item, ingredient }) => {
       {/* -----------------------image---------------------- */}
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
-        <img src={close} alt="close-icon" className="details__close" />
+        <Link to="/">
+          <img src={close} alt="close-icon" className="details__close" />
+        </Link>
       </div>
       {/* -----------------------description---------------------- */}
       <section className="details__info">
