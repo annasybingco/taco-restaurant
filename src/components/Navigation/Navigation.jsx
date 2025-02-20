@@ -1,36 +1,39 @@
-import homeIcon from "../../assets/icons/home.svg";
-import rewardsIcon from "../../assets/icons/rewards.svg";
-import profileIcon from "../../assets/icons/profile.svg";
-import faqIcon from "../../assets/icons/faq.svg";
+import { Link, useLocation } from "react-router-dom";
+import RewardsLogo from "../SVG/RewardsLogo";
+import ProfileLogo from "../SVG/ProfileLogo";
+import FaqLogo from "../SVG/FaqLogo";
+import HomeLogo from "../SVG/HomeLogo";
 import "../Navigation/Navigation.scss";
 
 function Navigation() {
+  const location = useLocation();
+
   return (
     <section className="navigation">
-      <div className="navigation__item">
-        <img src={homeIcon} alt="home-icon" className="navigation__icon" />
-        <p>Menu</p>
-      </div>
-      <div className="navigation__item">
-        <img
-          src={rewardsIcon}
-          alt="rewards-icon"
-          className="navigation__icon"
-        />
-        <p>Rewards</p>
-      </div>
-      <div className="navigation__item">
-        <img
-          src={profileIcon}
-          alt="profile-icon"
-          className="navigation__icon"
-        />
-        <p>Profile</p>
-      </div>
-      <div className="navigation__item">
-        <img src={faqIcon} alt="faq-icon" className="navigation__icon" />
-        <p>FAQ</p>
-      </div>
+      <Link to="/">
+        <div className={location.pathname === "/" ? "active" : ""}>
+          <HomeLogo />
+          <p>Menu</p>
+        </div>
+      </Link>
+      <Link to="/rewards">
+        <div className={location.pathname === "/rewards" ? "active" : ""}>
+          <RewardsLogo />
+          <p>Rewards</p>
+        </div>
+      </Link>
+      <Link to="/profile">
+        <div className={location.pathname === "/profile" ? "active" : ""}>
+          <ProfileLogo />
+          <p>Profile</p>
+        </div>
+      </Link>
+      <Link to="/faq">
+        <div className={location.pathname === "/faq" ? "active" : ""}>
+          <FaqLogo />
+          <p>FAQ</p>
+        </div>
+      </Link>
     </section>
   );
 }

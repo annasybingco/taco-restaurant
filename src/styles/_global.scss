@@ -6,7 +6,19 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  color: inherit;
 }
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
 //light mode
 :root {
   --bg-color: #{$light-primary-background};
@@ -16,6 +28,8 @@
   --icon-color: #{$light-icon};
   --logo-color: #{$light-logo};
   --badge-color: #{$light-badge-color};
+  --cta-color: #{$light-cta-color};
+  --cta-text-color: #{$light-cta-text};
 }
 
 //dark mode
@@ -27,6 +41,8 @@
   --icon-color: #{$dark-icon};
   --logo-color: #{dark-logo};
   --badge-color: #{$dark-badge-color};
+  --cta-color: #{$dark-cta-color};
+  --cta-text-color: #{$dark-cta-text};
 }
 
 #root {
@@ -68,14 +84,21 @@ h4 {
   font-size: 14px;
   text-transform: uppercase;
 }
-body {
+body,
+link {
   font-family: "Made Mirage";
   font-size: 14px;
 }
 
-body-small {
+.body-small {
   font-family: "Made Mirage";
   font-size: 10px;
+}
+
+button {
+  font-family: "Made Mirage";
+  font-size: 14px;
+  @include button;
 }
 
 @media (min-width: 768px) {

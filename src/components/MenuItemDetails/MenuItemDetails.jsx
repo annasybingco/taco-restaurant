@@ -1,21 +1,57 @@
 import close from "../../assets/icons/close.svg";
 import "../MenuId/MenuId.scss";
+import { useDispatchCart } from "../../Context/CartContext";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 const MenuItemDetails = ({ item, ingredient }) => {
-  console.log(item);
+  const dispatch = useDispatchCart();
+  const [selectedAddOns, setSelectedAddons] = useState([]);
+  const [cart, setCart] = useState([]);
+
+  // Load cart from localStorage on mount
+  useEffect(() => {
+    const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
+    setCart(existingCart);
+  }, []);
+
+  const handleAddOnChange = (selectedId) => {
+    setSelectedAddons((prev) => {
+      const isAlreadySelected = prev.some(
+        (ingredient) => ingredient.id === selectedId
+      );
+
+      const updatedAddOns = isAlreadySelected
+        ? prev.filter((ingredient) => ingredient.id !== selectedId)
+        : [...prev, ingredient.find((i) => i.id === selectedId)];
+      console.log("Updated Add-Ons:", updatedAddOns);
+      return updatedAddOns;
+    });
+  };
+
+  const addtoCart = () => {
+    const updatedItem = {
+      ...item,
+      selectedAddOns,
+    };
+
+    // Store in localStorage
+    const updatedCart = [...cart, updatedItem];
+    setCart(updatedCart);
+    localStorage.setItem("cart", JSON.stringify(updatedCart));
+
+    console.log("Selected Add-Ons before dispatch:", selectedAddOns);
+    dispatch({ type: "ADD", item: updatedItem });
+  };
+
   return (
     <>
-      <div>
-        <h2>{item.title}</h2>
-        <Link to={{ pathname: "/cart", state: { item, ingredient } }}>
-          Go to Cart
-        </Link>
-      </div>
       {/* -----------------------image---------------------- */}
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
-        <img src={close} alt="close-icon" className="details__close" />
+        <Link to="/">
+          <img src={close} alt="close-icon" className="details__close" />
+        </Link>
       </div>
       {/* -----------------------description---------------------- */}
       <section className="details__info">
@@ -31,7 +67,12 @@ const MenuItemDetails = ({ item, ingredient }) => {
               <p className="body">{item.ingredient}</p>
               <p>{item.price}</p>
             </div>
-            <input type="checkbox" className="details__checkbox" />
+            <input
+              type="checkbox"
+              className="details__checkbox"
+              checked={selectedAddOns.some((addOn) => addOn.id === item.id)}
+              onChange={() => handleAddOnChange(item.id)}
+            />
           </li>
         ))}
       </ul>
@@ -65,7 +106,7 @@ const MenuItemDetails = ({ item, ingredient }) => {
           placeholder="Add a note (Extra drop sauce, no onions, etc)"
         ></textarea>
       </div>
-      <button>Add to Cart</button>
+      <button onClick={() => addtoCart(item)}>Add to Cart</button>
     </>
   );
 };

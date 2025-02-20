@@ -36,7 +36,6 @@ const Details = () => {
 
   return (
     <div>
-      <h1>Menu Item Page</h1>
       <MenuItemDetails item={item} ingredient={ingredient} />
     </div>
   );

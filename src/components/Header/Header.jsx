@@ -1,14 +1,19 @@
-import logo from "../../assets/icons/burger-drop-logo.svg";
-import cart from "../../assets/icons/cart.svg";
+// import logo from "../../assets/icons/burger-drop-logo.svg";
+import CartLogo from "../SVG/CartLogo";
 import "./Header.scss";
+import { useCart } from "../../Context/CartContext";
+import { Link } from "react-router-dom";
+import BurgerLogo from "../SVG/BurgerLogo";
 
 function Header() {
+  const items = useCart();
   return (
     <div className="header">
-      <img src={logo} alt="" className="header__logo" />
+      <BurgerLogo />
       <section className="cart">
-        <img src={cart} alt="" className="cart__icon" />
-        <span className="cart__value">0</span>
+        <Link to="/cart">
+          <CartLogo />({items.length})
+        </Link>
       </section>
     </div>
   );
