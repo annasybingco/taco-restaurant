@@ -6,7 +6,9 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  text-decoration: none;
 }
+
 //light mode
 :root {
   --bg-color: #{$light-primary-background};
@@ -68,7 +70,8 @@ h4 {
   font-size: 14px;
   text-transform: uppercase;
 }
-body {
+body,
+link {
   font-family: "Made Mirage";
   font-size: 14px;
 }
