@@ -10,7 +10,6 @@ function Header() {
   return (
     <div className="header">
       <BurgerLogo />
-      {/* <img src={logo} alt="" className="header__logo" /> */}
       <section className="cart">
         <Link to="/cart">
           <CartLogo />({items.length})

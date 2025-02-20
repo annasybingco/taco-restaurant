@@ -17,10 +17,9 @@ const MenuItemDetails = ({ item, ingredient }) => {
       );
 
       const updatedAddOns = isAlreadySelected
-        ? prev.filter((ingredient) => ingredient.id !== selectedId) // Remove if exists
-        : [...prev, ingredient.find((i) => i.id === selectedId)]; // Add full object
-
-      console.log("Updated Add-Ons:", updatedAddOns); // ✅ Log after update
+        ? prev.filter((ingredient) => ingredient.id !== selectedId)
+        : [...prev, ingredient.find((i) => i.id === selectedId)];
+      console.log("Updated Add-Ons:", updatedAddOns);
       return updatedAddOns;
     });
   };
