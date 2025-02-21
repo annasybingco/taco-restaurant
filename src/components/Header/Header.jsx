@@ -9,7 +9,9 @@ function Header() {
   const items = useCart();
   return (
     <div className="header">
-      <BurgerLogo />
+      <Link to="/">
+        <BurgerLogo />
+      </Link>
       <section className="cart">
         <Link to="/cart">
           <CartLogo />({items.length})
