@@ -1,0 +1,42 @@
+@use "../../styles/mixins" as *;
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @include background-style;
+}
+.toggle-btn {
+  background-color: #b7b9ba;
+  border: 1px solid #aaa;
+  border-radius: 8px;
+  width: 50px;
+  height: 28px;
+  transition: background-color 0.1s ease, border-color 0.2s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+.toggle-btn .thumb {
+  height: 20px;
+  width: 20px;
+  background-color: white;
+  border-radius: 8px;
+  transition: transform 0.15s ease, left 0.15s ease; // Add transform transition
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.toggle-btn.toggle {
+  background-color: green;
+}
+
+.toggle-btn:hover {
+  border-color: #6f6f6f;
+}
+
+.toggle-btn.toggle .thumb {
+  transform: translate(22px, -50%);
+}

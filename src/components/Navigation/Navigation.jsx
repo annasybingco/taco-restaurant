@@ -7,6 +7,7 @@ import "../Navigation/Navigation.scss";
 
 function Navigation() {
   const location = useLocation();
+  const isActive = location.pathname === "";
 
   return (
     <section className="navigation">
@@ -30,8 +31,8 @@ function Navigation() {
       </Link>
       <Link to="/faq">
         <div className={location.pathname === "/faq" ? "active" : ""}>
-          <FaqLogo />
-          <p>FAQ</p>
+          <FaqLogo isActive={location.pathname === "/faq"} />
+          <p>Faq</p>
         </div>
       </Link>
     </section>
