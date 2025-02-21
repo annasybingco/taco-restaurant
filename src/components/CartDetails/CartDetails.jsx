@@ -12,6 +12,7 @@ function CartDetails() {
       </main>
     );
   }
+
   return (
     <>
       <main className="order">
@@ -28,7 +29,6 @@ function CartDetails() {
               {/* Display selected add-ons for each item */}
               {item.selectedAddOns && item.selectedAddOns.length > 0 && (
                 <div>
-                  {/* <p>Add-Ons:</p> */}
                   <ul>
                     {item.selectedAddOns.map((addOn) => (
                       <li key={addOn.id}>
@@ -38,12 +38,12 @@ function CartDetails() {
                   </ul>
                 </div>
               )}
+              <button onClick={() => dispatch({ type: "REMOVE", index })}>
+                Remove
+              </button>
             </li>
           ))}
         </ul>
-        <button onClick={() => dispatch({ type: "REMOVE", index })}>
-          Remove
-        </button>
       </main>
       <button>Place Order</button>
     </>

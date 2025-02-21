@@ -29,7 +29,7 @@ function MenuItems() {
               <div className="menu__details">
                 <h4>{item.title}</h4>
                 <p>{item.description}</p>
-                <p>Price: ${item.price}</p>
+                <p>${item.price}</p>
               </div>
               <div className="menu__photo">
                 <img
