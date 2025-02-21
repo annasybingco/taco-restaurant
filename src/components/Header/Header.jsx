@@ -1,5 +1,5 @@
 // import logo from "../../assets/icons/burger-drop-logo.svg";
-import CartLogo from "../SVG/CartLogo";
+import CartIcon from "../SVG/CartIcon";
 import "./Header.scss";
 import { useCart } from "../../Context/CartContext";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ function Header() {
       </Link>
       <section className="cart">
         <Link to="/cart">
-          <CartLogo />({items.length})
+          <CartIcon />({items.length})
         </Link>
       </section>
     </div>

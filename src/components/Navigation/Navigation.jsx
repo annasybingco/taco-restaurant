@@ -1,37 +1,36 @@
 import { Link, useLocation } from "react-router-dom";
-import RewardsLogo from "../SVG/RewardsLogo";
-import ProfileLogo from "../SVG/ProfileLogo";
-import FaqLogo from "../SVG/FaqLogo";
-import HomeLogo from "../SVG/HomeLogo";
+import RewardsIcon from "../SVG/RewardsIcon";
+import ProfileIcon from "../SVG/ProfileIcon";
+import FaqIcon from "../SVG/FaqIcon";
+import HomeIcon from "../SVG/HomeIcon";
 import "../Navigation/Navigation.scss";
 
 function Navigation() {
   const location = useLocation();
-  const isActive = location.pathname === "";
 
   return (
     <section className="navigation">
       <Link to="/">
         <div className={location.pathname === "/" ? "active" : ""}>
-          <HomeLogo />
+          <HomeIcon isActive={location.pathname === "/"} />
           <p>Menu</p>
         </div>
       </Link>
       <Link to="/rewards">
         <div className={location.pathname === "/rewards" ? "active" : ""}>
-          <RewardsLogo />
+          <RewardsIcon isActive={location.pathname === "/rewards"} />
           <p>Rewards</p>
         </div>
       </Link>
       <Link to="/profile">
         <div className={location.pathname === "/profile" ? "active" : ""}>
-          <ProfileLogo />
+          <ProfileIcon isActive={location.pathname === "/profile"} />
           <p>Profile</p>
         </div>
       </Link>
       <Link to="/faq">
         <div className={location.pathname === "/faq" ? "active" : ""}>
-          <FaqLogo isActive={location.pathname === "/faq"} />
+          <FaqIcon isActive={location.pathname === "/faq"} />
           <p>Faq</p>
         </div>
       </Link>

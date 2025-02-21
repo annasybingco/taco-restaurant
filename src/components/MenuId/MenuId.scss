@@ -36,10 +36,16 @@
 
 .details__ingredients {
   @include background-style;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .details__remove {
   @include background-style;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
 }
 
 .details__list {
@@ -56,10 +62,13 @@
 .details__textarea {
   display: flex;
   flex-direction: column;
+  gap: 1em;
 }
 
 .details__textbox {
   border: none;
   resize: none;
   border-radius: 8px;
+  padding: 1em;
+  background-color: var(--bg-color-secondary);
 }

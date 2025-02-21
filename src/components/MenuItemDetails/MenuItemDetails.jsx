@@ -1,4 +1,4 @@
-import close from "../../assets/icons/close.svg";
+import CloseIcon from "../SVG/CloseIcon";
 import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
 import { useEffect, useState } from "react";
@@ -50,7 +50,8 @@ const MenuItemDetails = ({ item, ingredient }) => {
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
         <Link to="/">
-          <img src={close} alt="close-icon" className="details__close" />
+          <CloseIcon />
+          {/* <img src={close} alt="close-icon" className="details__close" /> */}
         </Link>
       </div>
       {/* -----------------------description---------------------- */}

@@ -1,9 +1,14 @@
 import { useTheme } from "../../Context/ThemeContext";
 
-function ProfileLogo() {
+function ProfileLogo({ isActive }) {
   const theme = useTheme();
-  const logoColor = theme === "light" ? "#635443" : "#c2a788"; // if light then set other
-
+  const logoColor = isActive
+    ? theme === "light"
+      ? "#993333" // Light theme active color
+      : "#CF6679" // Dark theme active color
+    : theme === "light"
+    ? "#635443"
+    : "#c2a788";
   return (
     <svg
       width="17"

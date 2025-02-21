@@ -25,10 +25,10 @@ function MenuItems() {
       <ul className="menu">
         {menu.map((item) => (
           <li className="menu__item" key={item.id}>
-            <Link to={`/menu/${item.id}`}>
+            <Link to={`/menu/${item.id}`} className="menu__square">
               <div className="menu__details">
                 <h4>{item.title}</h4>
-                <p>{item.description}</p>
+                <p className="body-small">{item.description}</p>
                 <p>${item.price}</p>
               </div>
               <div className="menu__photo">
