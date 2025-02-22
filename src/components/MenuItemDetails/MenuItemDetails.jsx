@@ -3,6 +3,7 @@ import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import QuantitySelector from "../QuantitySelector/QuantitySelector";
 
 const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
@@ -107,6 +108,7 @@ const MenuItemDetails = ({ item, ingredient }) => {
           placeholder="Add a note (Extra drop sauce, no onions, etc)"
         ></textarea>
       </div>
+      <QuantitySelector />
       <button onClick={() => addtoCart(item)}>Add to Cart</button>
     </>
   );

@@ -31,7 +31,7 @@ function Navigation() {
       <Link to="/faq">
         <div className={location.pathname === "/faq" ? "active" : ""}>
           <FaqIcon isActive={location.pathname === "/faq"} />
-          <p>Faq</p>
+          <p>FAQ</p>
         </div>
       </Link>
     </section>

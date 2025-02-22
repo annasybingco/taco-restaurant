@@ -16,6 +16,7 @@ function Faq() {
   return (
     <div className="wrapper">
       <Navigation />
+      <h1>FAQ</h1>
       <h4>Ordering</h4>
       <div className="accordion">
         {data.map((item, i) => (

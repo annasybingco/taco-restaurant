@@ -1,5 +1,6 @@
 import { useCart, useDispatchCart } from "../../Context/CartContext";
 import "../../pages/Cart/Cart.scss";
+import QuantitySelector from "../QuantitySelector/QuantitySelector";
 
 function CartDetails() {
   const items = useCart(); // This will return the entire cart
@@ -36,6 +37,7 @@ function CartDetails() {
                       </li>
                     ))}
                   </ul>
+                  <QuantitySelector />
                 </div>
               )}
               <button onClick={() => dispatch({ type: "REMOVE", index })}>
