@@ -32,14 +32,3 @@
   height: 40px;
   display: block;
 }
-.order {
-  @include background-style;
-}
-
-.order__image {
-  width: 60px;
-}
-
-.order__section {
-  display: flex;
-}

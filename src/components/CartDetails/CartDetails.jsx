@@ -1,6 +1,5 @@
 import { useCart, useDispatchCart } from "../../Context/CartContext";
-import "../../pages/Cart/Cart.scss";
-import QuantitySelector from "../QuantitySelector/QuantitySelector";
+import "../CartDetails/CartDetails.scss";
 
 function CartDetails() {
   const items = useCart(); // This will return the entire cart
@@ -15,18 +14,22 @@ function CartDetails() {
   }
 
   return (
-    <>
-      <main className="order">
+    <section className="order">
+      <main className="order__details">
         <ul>
           {items.map((item, index) => (
             <li key={index} className="order__section">
-              <h4>{item.title}</h4>
-              <p>{item.price}</p>
-              <img
-                src={item.photo}
-                alt={item.description}
-                className="order__image"
-              />
+              <div className="order__information">
+                <div className="order__title">
+                  <h4>{item.title}</h4>
+                  <p>{item.price}</p>
+                </div>
+                <img
+                  src={item.photo}
+                  alt={item.description}
+                  className="order__image"
+                />
+              </div>
               {/* Display selected add-ons for each item */}
               {item.selectedAddOns && item.selectedAddOns.length > 0 && (
                 <div>
@@ -37,10 +40,12 @@ function CartDetails() {
                       </li>
                     ))}
                   </ul>
-                  <QuantitySelector />
                 </div>
               )}
-              <button onClick={() => dispatch({ type: "REMOVE", index })}>
+              <button
+                onClick={() => dispatch({ type: "REMOVE", index })}
+                className="order__btn"
+              >
                 Remove
               </button>
             </li>
@@ -48,7 +53,7 @@ function CartDetails() {
         </ul>
       </main>
       <button>Place Order</button>
-    </>
+    </section>
   );
 }
 
