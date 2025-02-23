@@ -24,6 +24,7 @@
 
 .rewards__points {
   display: flex;
+  flex: 1;
   align-items: center;
   gap: 1em;
 }
@@ -38,13 +39,13 @@
 .rewards__points {
   display: flex;
   padding: 1em;
-  background-color: lightblue;
+  background-color: var(--text-color-tertiary);
 
   border-radius: 10px 0 0 10px;
 }
 
 .rewards__description {
-  background-color: lightcoral;
+  background-color: var(--bg-color-secondary);
   padding: 1em;
   width: 100%;
   border-radius: 0 10px 10px 0;

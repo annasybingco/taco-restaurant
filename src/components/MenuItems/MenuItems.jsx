@@ -23,14 +23,14 @@ function MenuItems() {
     <div className="page">
       <ul className="menu">
         {menu.map((item) => (
-          <li className="menu__item" key={item.id}>
-            <Link to={`/menu/${item.id}`} className="menu__square">
+          <li className="" key={item.id}>
+            <Link to={`/menu/${item.id}`} className="menu__item">
               <div className="menu__details">
                 <h4>{item.title}</h4>
                 <p className="body-small">{item.description}</p>
                 <p>${item.price}</p>
               </div>
-              <div className="menu__photo">
+              <div>
                 <img
                   src={item.photo}
                   alt={item.title}
