@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../MenuItems/MenuItems.scss";
+import "../MenuItemDetails/MenuItemDetails.scss";
 import { Link } from "react-router-dom";
 
 function MenuItems() {
