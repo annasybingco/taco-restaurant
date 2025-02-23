@@ -11,17 +11,22 @@
   display: flex;
   justify-content: space-between;
 }
+
 .details__photo {
   width: 50%;
   overflow: hidden;
 }
 
-.details__close {
-  height: 1em;
-}
-
 .details__info {
   @include background-style;
+  width: 100%;
+}
+.details__ingredients {
+  @include background-style;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  width: 100%;
 }
 
 .details__item {
@@ -32,14 +37,6 @@
 
 .details__checkbox {
   @include checkbox;
-}
-
-.details__ingredients {
-  @include background-style;
-  display: flex;
-  flex-direction: column;
-  gap: 1em;
-  width: 100%;
 }
 
 .details__remove {
