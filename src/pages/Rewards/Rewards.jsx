@@ -1,11 +1,12 @@
 import React from "react";
 import Navigation from "../../components/Navigation/Navigation";
+import RewardsDetails from "../../components/RewardsDetails/RewardsDetails";
 
 function Rewards() {
   return (
     <div>
-      This is my rewards page!
       <Navigation />
+      <RewardsDetails />
     </div>
   );
 }

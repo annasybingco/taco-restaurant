@@ -1,0 +1,52 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.rewards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding-bottom: 4em;
+}
+
+.rewards__total {
+  @include background-style;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.rewards__title {
+  display: flex;
+  gap: 1em;
+}
+
+.rewards__points {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  gap: 1em;
+}
+
+.rewards__prize {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.rewards__points {
+  display: flex;
+  padding: 1em;
+  background-color: var(--text-color-tertiary);
+
+  border-radius: 10px 0 0 10px;
+}
+
+.rewards__description {
+  background-color: var(--bg-color-secondary);
+  padding: 1em;
+  width: 100%;
+  border-radius: 0 10px 10px 0;
+}

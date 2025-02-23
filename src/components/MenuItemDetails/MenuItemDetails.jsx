@@ -1,8 +1,9 @@
-import close from "../../assets/icons/close.svg";
+import CloseIcon from "../SVG/CloseIcon";
 import "../MenuId/MenuId.scss";
 import { useDispatchCart } from "../../Context/CartContext";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import QuantitySelector from "../QuantitySelector/QuantitySelector";
 
 const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
@@ -50,7 +51,8 @@ const MenuItemDetails = ({ item, ingredient }) => {
       <div className="details__img">
         <img src={item.photo} alt={item.title} className="details__photo" />
         <Link to="/">
-          <img src={close} alt="close-icon" className="details__close" />
+          <CloseIcon />
+          {/* <img src={close} alt="close-icon" className="details__close" /> */}
         </Link>
       </div>
       {/* -----------------------description---------------------- */}
@@ -106,6 +108,7 @@ const MenuItemDetails = ({ item, ingredient }) => {
           placeholder="Add a note (Extra drop sauce, no onions, etc)"
         ></textarea>
       </div>
+      <QuantitySelector />
       <button onClick={() => addtoCart(item)}>Add to Cart</button>
     </>
   );
