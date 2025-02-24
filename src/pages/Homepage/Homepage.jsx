@@ -1,10 +1,6 @@
-import "../../styles/_typography.scss";
-import "./Homepage.scss";
-import "../../styles/_variables.scss";
-
-import React from "react";
-import MenuItems from "../../components/MenuItems/MenuItems.jsx";
 import Navigation from "../../components/Navigation/Navigation.jsx";
+import MenuItems from "../../components/MenuItems/MenuItems.jsx";
+import "./Homepage.scss";
 
 function Homepage() {
   return (

@@ -7,11 +7,12 @@ import "../Details/Details.scss";
 const Details = () => {
   const [item, setItem] = useState({});
   const [ingredient, setIngredient] = useState([]);
+  const base_URL = import.meta.env.VITE_API_URL;
   const { id } = useParams();
 
   const getItem = async (id) => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/menu/${id}`);
+      const response = await axios.get(`${base_URL}/api/menu/${id}`);
       setItem(response.data);
     } catch (error) {
       console.error("Error fetching menu item", error);
@@ -24,7 +25,7 @@ const Details = () => {
 
   const getAddOns = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/ingredient/");
+      const response = await axios.get(`${base_URL}/api/ingredient/`);
       setIngredient(response.data);
     } catch (error) {
       console.error("Error fetching ingredients", error);
