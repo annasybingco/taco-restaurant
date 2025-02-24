@@ -53,7 +53,7 @@ function CartDetails() {
         </ul>
       </main>
       <Link to="/confirmation">
-        <button>Pay Now</button>
+        <button>Order Now</button>
       </Link>
     </section>
   );

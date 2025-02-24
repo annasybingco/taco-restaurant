@@ -4,7 +4,7 @@ import "../OrderConfirmation/OrderConfirmation.scss";
 
 function Order() {
   return (
-    <section>
+    <section className="order">
       <div className="order__text">
         <h4>Order is placed</h4>
         <p className="body-small">Your order number is #2137</p>
