@@ -4,7 +4,7 @@ import Toggle from "../../components/Toggle/Toggle";
 
 function Profile() {
   return (
-    <div>
+    <div className="page">
       <h1>Profile</h1>
       <Navigation />
       <Toggle />
