@@ -1,6 +1,6 @@
 import Navigation from "../Navigation/Navigation.jsx";
-import "./FaqDetails.scss";
 import React, { useState } from "react";
+import "./FaqDetails.scss";
 
 function Faq() {
   const [selected, setSelected] = useState(null);

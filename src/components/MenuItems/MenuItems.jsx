@@ -5,10 +5,11 @@ import "../MenuItems/MenuItems.scss";
 
 function MenuItems() {
   const [menu, setMenu] = useState([]);
+  const base_URL = import.meta.env.VITE_API_URL;
 
   const getMenu = async () => {
     try {
-      const response = await axios.get("http://localhost:8080/api/menu/");
+      const response = await axios.get(`${base_URL}/api/menu/`);
       setMenu(response.data);
     } catch (error) {
       console.error("Error fetching menu", error);

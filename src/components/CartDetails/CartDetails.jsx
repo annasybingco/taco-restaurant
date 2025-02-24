@@ -9,15 +9,16 @@ function CartDetails() {
   if (items.length === 0) {
     return (
       <main>
-        <p>Cart is empty</p>
+        <h4>Cart is empty</h4>
       </main>
     );
   }
 
   return (
     <section className="order">
+      <h1>Cart</h1>
       <main className="order__details">
-        <ul>
+        <ul className="order__list">
           {items.map((item, index) => (
             <li key={index} className="order__section">
               <div className="order__information">
@@ -44,7 +45,7 @@ function CartDetails() {
               )}
               <button
                 onClick={() => dispatch({ type: "REMOVE", index })}
-                className="order__btn"
+                className="order__remove"
               >
                 Remove
               </button>
@@ -52,7 +53,7 @@ function CartDetails() {
           ))}
         </ul>
       </main>
-      <Link to="/confirmation">
+      <Link to="/confirmation" className="order__btn">
         <button>Order Now</button>
       </Link>
     </section>

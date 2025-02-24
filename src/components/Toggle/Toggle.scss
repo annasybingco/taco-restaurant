@@ -19,6 +19,15 @@
     box-sizing: border-box;
   }
 }
+
+.toggle-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
 .toggle__btn .thumb {
   height: 20px;
   width: 20px;

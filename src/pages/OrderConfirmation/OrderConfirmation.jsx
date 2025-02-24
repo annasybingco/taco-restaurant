@@ -9,7 +9,7 @@ function Order() {
         <h4>Order is placed</h4>
         <p className="body-small">Your order number is #2137</p>
       </div>
-      <Link to="/">
+      <Link to="/" className="order__btn">
         <button>Back to Menu</button>
       </Link>
       <Navigation />

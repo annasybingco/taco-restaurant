@@ -4,7 +4,7 @@ import RewardsIcon from "../../assets/icons/rewards.svg";
 function RewardsDetails() {
   return (
     <section className="rewards">
-      <h1>Total Rewards</h1>
+      <h1>Rewards</h1>
 
       <section className="rewards__total">
         <div className="rewards__title">
