@@ -1,6 +1,6 @@
 import { useState } from "react";
-import "../Toggle/Toggle.scss";
 import { useThemeUpdate } from "../../Context/ThemeContext";
+import "../Toggle/Toggle.scss";
 
 function Toggle() {
   const [toggle, setToggle] = useState(false);
@@ -9,10 +9,10 @@ function Toggle() {
     <div className="toggle">
       <h4>{toggle ? "Light Mode" : "Dark Mode"}</h4>
       <button
-        className={`toggle-btn ${toggle ? "toggle" : ""}`}
+        className={`toggle__btn ${toggle ? "toggle" : ""}`}
         onClick={() => {
           setToggle(!toggle);
-          toggleTheme(); // Call theme update function here
+          toggleTheme();
         }}
       >
         <div className="thumb"></div>

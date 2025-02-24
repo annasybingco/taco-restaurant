@@ -3,11 +3,10 @@ import { useTheme } from "../../Context/ThemeContext";
 function FaqLogo({ isActive }) {
   const theme = useTheme();
 
-  // Define colors based on theme and active state
   const logoColor = isActive
     ? theme === "light"
-      ? "#993333" // Light theme active color
-      : "#CF6679" // Dark theme active color
+      ? "#993333"
+      : "#CF6679"
     : theme === "light"
     ? "#635443"
     : "#c2a788";
