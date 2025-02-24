@@ -1,0 +1,51 @@
+@use "../../styles/mixins" as *;
+
+.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  @include background-style;
+
+  &__btn {
+    background-color: var(--icon-color);
+    border: 1px solid var(--icon-color);
+    border-radius: 99px;
+    width: 50px;
+    height: 28px;
+    transition: background-color 0.1s ease, border-color 0.2s ease;
+    cursor: pointer;
+    position: relative;
+    box-sizing: border-box;
+  }
+}
+
+.toggle-all {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.toggle__btn .thumb {
+  height: 20px;
+  width: 20px;
+  background-color: var(--text-color-tertiary);
+  border-radius: 99px;
+  transform: translateX(0);
+  transition: left 0.15s ease;
+  position: absolute;
+  left: 3px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.toggle__btn.toggle {
+  background-color: var(--icon-color);
+  height: 28px;
+}
+
+.toggle__btn.toggle .thumb {
+  left: calc(50px - 25px);
+}

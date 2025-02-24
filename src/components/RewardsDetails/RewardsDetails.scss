@@ -1,0 +1,71 @@
+@use "../../styles/variables" as *;
+@use "../../styles/mixins" as *;
+
+.rewards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+  padding-bottom: 4em;
+
+  &__total {
+    @include background-style;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__title {
+    display: flex;
+    gap: 1em;
+  }
+
+  &__total-points {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__prize-list {
+    display: flex;
+    flex-direction: column;
+    align-items: centerdddd;
+    gap: 1em;
+    padding-bottom: 4em;
+    width: 100%;
+  }
+
+  &__paragraph {
+    padding-top: 2em;
+  }
+
+  &__prize {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+  }
+
+  &__points {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: var(--text-color-tertiary);
+    border-radius: 10px 0 0 10px;
+    min-width: 30%;
+  }
+  &__description {
+    display: flex;
+    align-items: center;
+    background-color: var(--bg-color-secondary);
+    padding: 1em;
+    width: 100%;
+    border-radius: 0 10px 10px 0;
+  }
+
+  &__icon {
+    height: 16px;
+  }
+}

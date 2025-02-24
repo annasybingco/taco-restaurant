@@ -1,0 +1,19 @@
+.navigation {
+  display: flex;
+  padding: 8px;
+  justify-content: space-between;
+  border: 1px solid var(--icon-color);
+  border-radius: 10px 10px 0 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--bg-color-secondary);
+  padding: 1em;
+  text-align: center;
+  align-items: center;
+
+  &__active {
+    color: var(--logo-color);
+  }
+}

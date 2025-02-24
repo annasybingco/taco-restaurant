@@ -1,0 +1,34 @@
+@use "../../styles/global";
+@use "../../styles/mixins";
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bg-color);
+  padding: 0;
+  gap: 1em;
+
+  &__item {
+    display: flex;
+    background-color: var(--bg-color-secondary);
+    padding-bottom: 1em;
+    min-width: 100%;
+    border-radius: 12px;
+    padding: 12px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+  }
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 70%;
+  }
+
+  &__image {
+    width: 100px;
+    height: 90px;
+  }
+}

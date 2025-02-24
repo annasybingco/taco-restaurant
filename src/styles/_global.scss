@@ -1,25 +1,139 @@
 @use "./variables" as *;
 @use "./mixins" as *;
+@use "typography" as *;
 
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    background-color: $bg-beige;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:visited {
+  color: inherit;
+}
+
+//light mode
+:root {
+  --bg-color: #{$light-primary-background};
+  --bg-color-secondary: #{$light-secondary-background};
+  --text-color: #{$light-primary-text};
+  --text-color-tertiary: #{$light-tertiary-text};
+  --icon-color: #{$light-icon};
+  --logo-color: #{$light-logo};
+  --badge-color: #{$light-badge-color};
+  --cta-color: #{$light-cta-color};
+  --cta-text-color: #{$light-cta-text};
+}
+
+//dark mode
+[data-theme="dark"] {
+  --bg-color: #{$dark-primary-background};
+  --bg-color-secondary: #{$dark-secondary-background};
+  --text-color: #{$dark-primary-text};
+  --text-color-tertiary: #{$dark-tertiary-text};
+  --icon-color: #{$dark-icon};
+  --logo-color: #{dark-logo};
+  --badge-color: #{$dark-badge-color};
+  --cta-color: #{$dark-cta-color};
+  --cta-text-color: #{$dark-cta-text};
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+
+  @include tablet {
+    padding: 2em;
   }
-  
-  #root {
-    display: flex;
-    flex-direction: column;
-    padding: 1em;
-  
-    @include tablet {
-      padding: 2em;
-    }
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+h1 {
+  font-family: "Cocogoose";
+  font-size: 20px;
+  color: var(--text-color);
+}
+h2 {
+  font-family: "Cocogoose";
+  font-size: 18px;
+}
+
+h3 {
+  font-family: "Cocogoose";
+  font-size: 16px;
+}
+h4 {
+  font-family: "Cocogoose";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+body,
+link {
+  font-family: "Made Mirage";
+  font-size: 16px;
+}
+
+.body-small {
+  font-family: "Made Mirage";
+  font-size: 14px;
+}
+
+button {
+  font-family: "Made Mirage";
+  font-size: 14px;
+  @include button;
+}
+
+textarea {
+  font-family: "Made Mirage";
+  font-size: 16px;
+}
+
+textarea::placeholder {
+  font-family: "Made Mirage";
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-family: "Cocogoose";
+    font-size: 24px;
   }
 
-  ul{
-    list-style-type: none;
+  h2 {
+    font-family: "Cocogoose";
+    font-size: 22px;
   }
 
- 
+  h3 {
+    font-family: "Cocogoose";
+    font-size: 20px;
+  }
+
+  body {
+    font-family: "Made Mirage";
+    font-size: 16px;
+  }
+
+  .body-small {
+    font-family: "Made Mirage";
+    font-size: 14px;
+  }
+}

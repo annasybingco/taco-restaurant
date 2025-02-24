@@ -1,23 +1,14 @@
-import '../../styles/_typography.scss'
-import '../Homepage/Homepage.scss'
-import Burger from "../../assets/images/original.png"
+import Navigation from "../../components/Navigation/Navigation.jsx";
+import MenuItems from "../../components/MenuItems/MenuItems.jsx";
+import "./Homepage.scss";
 
 function Homepage() {
   return (
-    <section className='homepage'>
-      <h2 className="heading-2">Burgers</h2>
-      <div className='menu'>
-<ul className='menu__item'>
-    <li className='menu__title h4'>Original Burger</li>
-    <li className='menu__description body-small'>Griddled sweet onion, American cheese, house pickles, drop sauce, toasted potato roll.</li>
-    <li className='menu__price body'>$8.50</li>
-</ul>
-<div>
-    <img src={Burger} alt="original-burger" className='menu__image' />
-</div>
-      </div>
-    </section>
-  )
+    <div className="page">
+      <Navigation />
+      <MenuItems />
+    </div>
+  );
 }
 
-export default Homepage
+export default Homepage;

@@ -1,28 +1,6 @@
 @use "../../styles/variables" as *;
 @use "../../styles/global" as *;
 
-.heading-2 {
-    padding-bottom: 2em;
+.page {
+  padding-bottom: 3em;
 }
-.menu {
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    background-color: $light-beige;
-    padding: 2em;
-    border-radius: 12px;
-
-    &__item{
-        display: flex;
-        flex-direction: column;
-        gap: 1em;
-        max-width: 60%;
-        background-color: $light-beige;
-    }
-
-    &__image {
-        height: 4em;
-        width: 4em;
-    }
-}
-
