@@ -1,6 +1,5 @@
 import Navigation from "../../components/Navigation/Navigation.jsx";
 import "../Faq/Faq.scss";
-import Faq2 from "./Faq2.jsx";
 import React, { useState } from "react";
 
 function Faq() {
