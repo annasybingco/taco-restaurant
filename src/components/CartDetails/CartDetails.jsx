@@ -1,8 +1,9 @@
 import { useCart, useDispatchCart } from "../../Context/CartContext";
+import { Link } from "react-router-dom";
 import "../CartDetails/CartDetails.scss";
 
 function CartDetails() {
-  const items = useCart(); // This will return the entire cart
+  const items = useCart();
   const dispatch = useDispatchCart();
 
   if (items.length === 0) {
@@ -30,7 +31,6 @@ function CartDetails() {
                   className="order__image"
                 />
               </div>
-              {/* Display selected add-ons for each item */}
               {item.selectedAddOns && item.selectedAddOns.length > 0 && (
                 <div>
                   <ul>
@@ -52,7 +52,9 @@ function CartDetails() {
           ))}
         </ul>
       </main>
-      <button>Place Order</button>
+      <Link to="/confirmation">
+        <button>Pay Now</button>
+      </Link>
     </section>
   );
 }

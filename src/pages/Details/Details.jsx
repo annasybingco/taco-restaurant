@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import MenuItemDetails from "../../components/MenuItemDetails/MenuItemDetails";
+import "../Details/Details.scss";
 
 const Details = () => {
   const [item, setItem] = useState({});

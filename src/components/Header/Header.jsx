@@ -11,11 +11,9 @@ function Header() {
       <Link to="/">
         <BurgerLogo />
       </Link>
-      <section className="cart">
-        <Link to="/cart">
-          <CartIcon />({items.length})
-        </Link>
-      </section>
+      <Link to="/cart">
+        <CartIcon />({items.length})
+      </Link>
     </div>
   );
 }

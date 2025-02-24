@@ -4,8 +4,8 @@ function ProfileLogo({ isActive }) {
   const theme = useTheme();
   const logoColor = isActive
     ? theme === "light"
-      ? "#993333" // Light theme active color
-      : "#CF6679" // Dark theme active color
+      ? "#993333"
+      : "#CF6679"
     : theme === "light"
     ? "#635443"
     : "#c2a788";
