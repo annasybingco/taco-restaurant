@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ToastContainer } from "react-toastify";
 import { ThemeProvider } from "./Context/ThemeContext.jsx";
 import { CartProvider } from "./Context/CartContext.jsx";
+import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header/Header.jsx";
 import Homepage from "./pages/Homepage/Homepage";
 import Details from "./pages/Details/Details";
@@ -14,6 +16,7 @@ function App() {
   return (
     <ThemeProvider>
       <CartProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Header />
           <Routes>

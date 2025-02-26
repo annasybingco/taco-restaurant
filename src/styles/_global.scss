@@ -19,6 +19,22 @@ a:visited {
   color: inherit;
 }
 
+.Toastify__toast {
+  position: relative;
+}
+
+.Toastify__close-button {
+  position: absolute;
+  top: 8px; // Adjust as needed
+  right: 8px; // Adjust as needed
+  color: white !important;
+  opacity: 0.8; // Makes it visible
+}
+
+.Toastify__close-button:hover {
+  opacity: 1;
+}
+
 //light mode
 :root {
   --bg-color: #{$light-primary-background};

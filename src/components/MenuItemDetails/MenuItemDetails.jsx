@@ -1,4 +1,5 @@
 import { useDispatchCart } from "../../Context/CartContext";
+import { toast } from "react-toastify";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import CloseIcon from "../SVG/CloseIcon";
@@ -8,6 +9,10 @@ const MenuItemDetails = ({ item, ingredient }) => {
   const dispatch = useDispatchCart();
   const [selectedAddOns, setSelectedAddons] = useState([]);
   const [cart, setCart] = useState([]);
+
+  const notify = () => {
+    toast.success(`item added to cart`);
+  };
 
   useEffect(() => {
     const existingCart = JSON.parse(localStorage.getItem("cart")) || [];
@@ -99,7 +104,14 @@ const MenuItemDetails = ({ item, ingredient }) => {
           placeholder="Add a note (Extra drop sauce, no onions, etc)"
         ></textarea>
       </div>
-      <button onClick={() => addtoCart(item)}>Add to Cart</button>
+      <button
+        onClick={() => {
+          notify();
+          addtoCart(item);
+        }}
+      >
+        Add to Cart
+      </button>
     </>
   );
 };
