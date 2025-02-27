@@ -37,13 +37,13 @@
   transition: left 0.15s ease;
   position: absolute;
   left: 3px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 50%; //centers moving thumb
+  transform: translateY(-50%); //centers thumb
 }
 
 .toggle__btn.toggle {
   background-color: var(--icon-color);
-  height: 28px;
+  height: 20px;
 }
 
 .toggle__btn.toggle .thumb {
