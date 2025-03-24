@@ -1,16 +1,15 @@
-# Burger Drops
+# Taco 'Bout It
 
 ## Overview
 
-BurgerDrops is a Toronto-based, fast-casual restaurant that delivers quality smash burgers to its loyal patrons. Currently, they have a website available to them but are interested in expanding their company by creating an app.
+Taco 'Bout It is a fictional restaurant that serves mouthwatering, authentic tacos to it's loyal patrons.  While the restaurant doesn’t exist, this project explores the potential of expanding a local taco spot by developing a dedicated app.
 
 ### Problem Space
 
-This app is to benefit a local small business owner. Currently, as they’re utilizing Uber Eats and Doordash, they must pay costly fees to keep their restaurant on the platform. They’re looking to create an app so that the company can retain their revenue, and align a bespoke app to their branding guidelines.
+This app concept aims to support a hypothetical small business owner. Since Taco 'Bout It relies on platforms like Uber Eats and DoorDash, they would incur costly fees to keep their restaurant listed. The goal is to create a custom app that helps retain more revenue and develop an experience that aligns seamlessly with their unique brand identity.
 
 ### User Profile
 
-![User Persona](./capstone-proposal/user-persona.jpg)
 
 ### Features
 
@@ -28,22 +27,4 @@ React, Node, Express, Javascript, SCCS, Photoshop
 
 ### APIs
 
-I will be creating my API for this project.
-
-### Sitemap
-
-![Sitemap](./capstone-proposal/sitemap.jpg)
-
-### Mockups
-
-![Menu](./capstone-proposal/menu.png)
-
-![Menu Details](./capstone-proposal/menu-details.jpg)
-
-![Order Page](./capstone-proposal/order-page.jpg)
-
-![Rewards Page](./capstone-proposal/rewards.jpg)
-
-![Profile Page](./capstone-proposal/profile.jpg)
-
-![FAQ Page](./capstone-proposal/faq.jpg)
+Created my own API for this project.
