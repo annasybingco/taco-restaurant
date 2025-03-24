@@ -38,21 +38,21 @@ function Faq() {
 const data = [
   {
     id: 1,
-    question: "How can I place an order?",
+    question: "Do you offer vegetarian or vegan options?",
     answer:
-      "To place an order, you have many options. Drop by the shop to order in-person during our regular hours, order ahead for pick-up on Ritual, our app or for delivery on Uber Eats and Doordash.",
+      "Absolutely! We offer a variety of delicious vegetarian and vegan tacos, including options like grilled veggies, plant-based proteins, and fresh toppings. Just let us know your preferences when placing your order, and we’ll make sure your meal hits the spot!",
   },
   {
     id: 2,
-    question: "Can I order over the phone?",
+    question: "Can I customize my tacos?",
     answer:
-      "Phone orders are not possible at this time as we cannot process a transaction for your order via text or phone.",
+      "Absolutely! Our tacos are fully customizable. Choose your protein, toppings, sauces, and sides to create the perfect taco just the way you like it. Whether you're into spicy or mild, we’ve got options for everyone!",
   },
   {
     id: 3,
-    question: "Do you offer catering?",
+    question: "Are your tacos gluten-free?",
     answer:
-      "Yes! Burger Drops specializes in both on-site private catering and large group orders for your office or next celebration.",
+      "We offer gluten-free taco options, including corn tortillas and several gluten-free fillings. Just let us know if you have any dietary restrictions or preferences when ordering, and we’ll make sure your tacos are tailored to your needs!",
   },
 ];
 

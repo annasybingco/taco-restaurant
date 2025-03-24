@@ -1,5 +1,5 @@
 import "../RewardsDetails/RewardsDetails.scss";
-import RewardsIcon from "../../assets/icons/rewards.svg";
+import RewardsIcon from "../SVG/RewardsIcon";
 
 function RewardsDetails() {
   return (
@@ -8,7 +8,7 @@ function RewardsDetails() {
 
       <section className="rewards__total">
         <div className="rewards__title">
-          <img src={RewardsIcon} alt="rewards-icon" className="rewards__icon" />
+          <RewardsIcon />
           <p>Drop points</p>
         </div>
         <div className="rewards__total-points">
@@ -22,56 +22,40 @@ function RewardsDetails() {
         <section className="rewards__prize">
           <div className="rewards__points">
             <p>100</p>
-            <img
-              src={RewardsIcon}
-              alt="rewards-icon"
-              className="rewards__icon"
-            />
+            <RewardsIcon />
           </div>
           <div className="rewards__description">
-            <p className="body-small">Any side you’d like!</p>
+            <p className="body-small">Any two salsas of your choice!</p>
           </div>
         </section>
 
         <section className="rewards__prize">
           <div className="rewards__points">
             <p>200</p>
-            <img
-              src={RewardsIcon}
-              alt="rewards-icon"
-              className="rewards__icon"
-            />
+            <RewardsIcon />
           </div>
           <div className="rewards__description">
-            <p>A burger of your choice</p>
+            <p>A free taco</p>
           </div>
         </section>
 
         <section className="rewards__prize">
           <div className="rewards__points">
             <p>375</p>
-            <img
-              src={RewardsIcon}
-              alt="rewards-icon"
-              className="rewards__icon"
-            />
+            <RewardsIcon />
           </div>
           <div className="rewards__description">
-            <p>Double patty combo of your choice</p>
+            <p>A full meal</p>
           </div>
         </section>
 
         <section className="rewards__prize">
           <div className="rewards__points">
             <p>500</p>
-            <img
-              src={RewardsIcon}
-              alt="rewards-icon"
-              className="rewards__icon"
-            />
+            <RewardsIcon />
           </div>
           <div className="rewards__description">
-            <p>Burger Drop sweater</p>
+            <p>Taco 'Bout It Hoodie</p>
           </div>
         </section>
       </section>
