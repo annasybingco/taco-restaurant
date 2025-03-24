@@ -2,7 +2,7 @@ import { useTheme } from "../../Context/ThemeContext";
 
 function CartLogo() {
   const theme = useTheme();
-  const logoColor = theme === "light" ? "#635443" : "#c2a788";
+  const logoColor = theme === "light" ? "#254327" : "#a0afa0";
   return (
     <svg
       width="19"

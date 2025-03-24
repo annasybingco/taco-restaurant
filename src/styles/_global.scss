@@ -82,74 +82,75 @@ body {
 }
 
 h1 {
-  font-family: "Cocogoose";
+  font-family: "Luckiest Guy";
   font-size: 20px;
   color: var(--text-color);
 }
 h2 {
-  font-family: "Cocogoose";
+  font-family: "Luckiest Guy";
   font-size: 18px;
 }
 
 h3 {
-  font-family: "Cocogoose";
+  font-family: "Luckiest Guy";
   font-size: 16px;
 }
 h4 {
-  font-family: "Cocogoose";
+  font-family: "Luckiest Guy";
   font-size: 14px;
+  letter-spacing: 1px;
   text-transform: uppercase;
 }
 body,
 link {
-  font-family: "Made Mirage";
+  font-family: "Open Sans";
   font-size: 16px;
 }
 
 .body-small {
-  font-family: "Made Mirage";
+  font-family: "Open Sans";
   font-size: 14px;
 }
 
 button {
-  font-family: "Made Mirage";
+  font-family: "Open Sans";
   font-size: 14px;
   @include button;
 }
 
 textarea {
-  font-family: "Made Mirage";
+  font-family: "Open Sans";
   font-size: 16px;
 }
 
 textarea::placeholder {
-  font-family: "Made Mirage";
+  font-family: "Open Sans";
   font-size: 16px;
 }
 
 @media (min-width: 768px) {
   h1 {
-    font-family: "Cocogoose";
+    font-family: "Luckiest Guy";
     font-size: 24px;
   }
 
   h2 {
-    font-family: "Cocogoose";
+    font-family: "Luckiest Guy";
     font-size: 22px;
   }
 
   h3 {
-    font-family: "Cocogoose";
+    font-family: "Luckiest Guy";
     font-size: 20px;
   }
 
   body {
-    font-family: "Made Mirage";
+    font-family: "Open Sans";
     font-size: 16px;
   }
 
   .body-small {
-    font-family: "Made Mirage";
+    font-family: "Open Sans";
     font-size: 14px;
   }
 }
