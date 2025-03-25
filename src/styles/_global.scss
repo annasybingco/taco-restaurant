@@ -83,11 +83,13 @@ body {
 
 h1 {
   font-family: "Luckiest Guy";
-  font-size: 20px;
+  font-size: 24px;
+  letter-spacing: 2.5px;
   color: var(--text-color);
 }
 h2 {
   font-family: "Luckiest Guy";
+  letter-spacing: 2px;
   font-size: 18px;
 }
 
@@ -97,8 +99,8 @@ h3 {
 }
 h4 {
   font-family: "Luckiest Guy";
-  font-size: 14px;
-  letter-spacing: 1px;
+  font-size: 16px;
+  letter-spacing: 2.5px;
   text-transform: uppercase;
 }
 body,
