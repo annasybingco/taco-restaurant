@@ -4,11 +4,11 @@ function RewardsLogo({ isActive }) {
   const theme = useTheme();
   const logoColor = isActive
     ? theme === "light"
-      ? "#993333"
-      : "#CF6679"
+      ? "#5A965E"
+      : "#3A6E3D"
     : theme === "light"
-    ? "#635443"
-    : "#c2a788";
+    ? "#a0afa0"
+    : "#a0afa0";
   return (
     <svg
       width="21"
